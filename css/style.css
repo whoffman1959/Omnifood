@@ -1,24 +1,22 @@
 /* Design Settings
 
---- 01 TYPROGRAPHY sYSTEM
+--- 01 TYPROGRAPHY SYSTEM
 
   - Font Sizes (px)
     10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
   - Font weights:
+    Default: 400
 
 
   - Line heights:
     Default: 1
 
 
-  - Spacing (px):
-        2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
 --- 02 COLORS
 
-  - Primary: 
-    #e67e22
+  - Primary: #e67e22
 
   - Tints:
 
@@ -29,6 +27,15 @@
   - Greys:
     #555
 
+--- 05 SHADOWS
+
+--- 06 BORDER-RADIUS
+
+--- 07 WHITESPACE
+
+--- 08 SPACING
+  - Spacing (px):
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
    
 */
 
