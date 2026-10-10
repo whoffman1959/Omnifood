@@ -20,8 +20,10 @@
 
   - Tints:
     #fdf2e9
+    
 
   - Shades: 
+    #cf711f
 
   - Accents: 
 
@@ -56,7 +58,7 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Rubik', sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
@@ -116,6 +118,7 @@ body {
 .btn--full:visited {
   background-color: #e67e22;
   color: #fff;
+  font-weight: 600;
 }
 
 .btn--full:hover,
@@ -145,4 +148,47 @@ body {
 
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+
+.delivered-meals {
+  display: flex;
+  margin-top: 8rem;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+/* display: flex; is applied to the parent container
+   .delivered-imgs, which arranges its child images
+   horizontally in a row by default (flex-direction: row).    The descendant selector .delivered-imgs img targets
+   each <img> element inside that parent container,
+   allowing us to style the individual pictures. 
+   Flexbox controls the arrangement of the children,
+   while the descendant selector controls their appearance. */
+
+.delivered-imgs {
+  display: flex;
+}
+
+.delivered-imgs img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  /* Causes pictures to overlap. */
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+}
+
+/* Corrects the last picture canceling out the gap. */
+
+.delivered-imgs img:last-child {
+  margin-right: 0;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.delivered-text span {
+  color: #cf711f;
 }
