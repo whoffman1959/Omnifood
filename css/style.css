@@ -62,6 +62,12 @@ body {
   color: #555;
 }
 
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
 /* HERO SECTION */
 
 .section-hero {
