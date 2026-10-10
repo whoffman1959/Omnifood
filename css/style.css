@@ -141,6 +141,8 @@ body {
   width: 100%;
 }
 
+/* Helper class that can be used on anything instead of using another class name for a margin where you do not want to change several things with the same class. Use this instead. */
+
 .margin-right-sm {
   margin-right: 1.6rem !important;
 }
