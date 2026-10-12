@@ -68,12 +68,6 @@ body {
   color: #555;
 }
 
-/* .container {
-  width: 90%;
-  margin: 0 auto;
-  max-width: 1200px;
-} */
-
 /* ********************************* */
 /*   GENERAL REUSABLLE COMPONENTS    */
 /* ********************************* */
@@ -189,7 +183,7 @@ A comma means either class can be selected.
 
 .class1.class2 = AND
 No space or comma means BOTH classes must
-exist on the SAME element. This also increases CSS specificity. He wants to make sure that a differnet color on .main-nav-link does not override the button color of #fff.
+exist on the SAME element. This also increases CSS specificity. Makes sure that a differnet color on .main-nav-link does not override the button color of of #cf711f with #fff.
 
 A CTA (Call to Action) can be a link <a>
 or a button <button>, depending on its purpose. For below Both classes are required to select this CTA link.
@@ -283,4 +277,62 @@ This increases specificity so the CTA styling can override the regular navigatio
 
 .delivered-text span {
   color: #cf711f;
+}
+
+/* ********************************* */
+/*           HOW IT WORKS            */
+/* ********************************* */
+
+.section-how {
+  padding: 9.6px 0;
+  background-color: orangered;
+}
+
+.container {
+  /* 114 rem is also used 1140px in th industry. */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6px;
+}
+
+/* -- Means variation of the original. */
+
+.gridd--2cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gridd--3cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gridd--4cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.section-how div {
+  padding: 100px;
+  font-size: 50px;
+}
+
+/* Remember: :nth-child() counts positions among ALL sibling elements. It would not work attached to .section-how:nth-child(1) this selects the section being the only one here. */
+
+.section-how div:nth-child(1) {
+  background-color: aqua;
+}
+
+.section-how div:nth-child(2) {
+  background-color: blue;
+}
+
+.section-how div:nth-child(3) {
+  background-color: violet;
+}
+
+.section-how div:nth-child(4) {
+  background-color: yellow;
 }
