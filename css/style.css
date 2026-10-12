@@ -72,6 +72,32 @@ body {
 /*   GENERAL REUSABLLE COMPONENTS    */
 /* ********************************* */
 
+.container {
+  /* 114 rem is also used 1140px in th industry. Only impacts the things wrapped by the container element */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6px;
+}
+
+/* -- Means variation of the original. */
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .heading-primary {
   font-size: 5.2rem;
   font-weight: 700;
@@ -214,8 +240,8 @@ This increases specificity so the CTA styling can override the regular navigatio
 }
 
 .hero {
+  /* margin: 0 auto; centers everyting if I do not use the container. This makes the hero section a little wider than the rest of the content not using the container class. */
   max-width: 130rem;
-  /* margin: 0 auto; centers everyting if I do not use the container. */
   margin: 0 auto;
   padding: 0 3.2rem;
   display: grid;
@@ -242,14 +268,6 @@ This increases specificity so the CTA styling can override the regular navigatio
   align-items: center;
   gap: 1.6rem;
 }
-
-/* display: flex; is applied to the parent container
-   .delivered-imgs, which arranges its child images
-   horizontally in a row by default (flex-direction: row).    The descendant selector .delivered-imgs img targets
-   each <img> element inside that parent container,
-   allowing us to style the individual pictures. 
-   Flexbox controls the arrangement of the children,
-   while the descendant selector controls their appearance. */
 
 .delivered-imgs {
   display: flex;
@@ -284,55 +302,9 @@ This increases specificity so the CTA styling can override the regular navigatio
 /* ********************************* */
 
 .section-how {
-  padding: 9.6px 0;
-  background-color: orangered;
+  padding: 9.6rem 0;
 }
 
-.container {
-  /* 114 rem is also used 1140px in th industry. */
-  max-width: 120rem;
-  padding: 0 3.2rem;
-  margin: 0 auto;
-}
-
-.grid {
-  display: grid;
-  gap: 9.6px;
-}
-
-/* -- Means variation of the original. */
-
-.gridd--2cols {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.gridd--3cols {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.gridd--4cols {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.section-how div {
-  padding: 100px;
-  font-size: 50px;
-}
-
-/* Remember: :nth-child() counts positions among ALL sibling elements. It would not work attached to .section-how:nth-child(1) this selects the section being the only one here. */
-
-.section-how div:nth-child(1) {
-  background-color: aqua;
-}
-
-.section-how div:nth-child(2) {
-  background-color: blue;
-}
-
-.section-how div:nth-child(3) {
-  background-color: violet;
-}
-
-.section-how div:nth-child(4) {
-  background-color: yellow;
+.step-img {
+  width: 50%;
 }
