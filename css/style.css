@@ -260,6 +260,13 @@ This increases specificity so the CTA styling can override the regular navigatio
   border-radius: 11px;
   /* To round the picture that is hiding (overflowing the container) the slight rounding on top by the borer-radius */
   overflow: hidden;
+  transition: all 0.4s;
+}
+
+/* Make the cards move up when hovering. translate(x,y) or just us translateY for the veritical.*/
+.meal:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 }
 
 .meal-content {
@@ -324,4 +331,30 @@ This increases specificity so the CTA styling can override the regular navigatio
 
 .meal-img {
   width: 100%;
+}
+
+.all-recipes {
+  text-align: center;
+  /* Set font-size here so the link inherits it and I can use a differnt size using a similar method for other links, specifying the size in their parents.  */
+  font-size: 1.8rem;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
 }

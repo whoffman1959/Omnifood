@@ -161,7 +161,7 @@ body {
   font-size: 2rem;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
-  /* Add animatioin to the button for all states for (.3) second. It takes that time to change the color. Gives animatioin in a simple way, change value of one property to another is animation. Put transiton on the orignal state.*/
+  /* Add animatioin to the button for all states for (.3) second. It takes that time to change the color. Gives animatioin in a simple way, change value of one property to another is animation. Put transiton on the orignal state. Use all instead of things like  back-ground so that bugs do not occur. */
   transition: all 0.3s;
 }
 
@@ -191,8 +191,41 @@ body {
   box-shadow: inset 0 0 0 3px #fff;
 }
 
+.link:link,
+.link:visited {
+  /* inline-block to have padding. */
+  display: inline-block;
+  color: #e67e22;
+  text-decoration: none;
+  /* Use border to create a nicer line under the link.
+ */
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  /* currentColor matches the underline to the below color but we want to remove the border at the bottom. */
+  color: #cf711f;
+  /* To keep link from jumping we do not get rid of border which is 1px but instead make it transparrent. */
+  border-bottom: 1px solid transparent;
+}
+
+/* HELPER CLASSES  */
+
+/* Helper class to not impact generic grid containers. */
+
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+  text-align: center;
 }
 
 strong {
