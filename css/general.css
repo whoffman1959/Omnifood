@@ -214,7 +214,7 @@ body {
 
 /* HELPER CLASSES  */
 
-/* Helper class to not impact generic grid containers. */
+/* Helper classes seperate from  reusable components including grid containers. */
 
 .margin-right-sm {
   margin-right: 1.6rem !important;
