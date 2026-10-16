@@ -358,3 +358,70 @@ This increases specificity so the CTA styling can override the regular navigatio
   height: 3rem;
   color: #e67e22;
 }
+
+/* ********************************* */
+/*           Testimonials            */
+/* ********************************* */
+
+.section-testimonials {
+  background-color: #fdf2e9;
+  display: grid;
+  /* For fr you do not need to use 1. We could use 50fr and 50fr and they both would be equal. So you can treat them like percents for fine tuning the width of each. */
+  grid-template-columns: 55fr 45fr;
+  /* Helps with spacing when page width reduced. */
+  align-items: center;
+}
+
+/* Create a new 2 by 2 grid due to different sizing requirements from total page layout. */
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+
+.testimonials-container {
+  padding: 9.6rem;
+}
+
+.testimonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #6f6f6f;
+}
+
+/* Images are inline so will have white spaces between pictures. To get rid of white spacing make them block elements. */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.gallery-item {
+  /* Keeps the pictures from overflowing into the grid gaps when hovering for scale of 1.1. Really a nice effect. */
+  overflow: hidden;
+}
+
+.gallery-item img {
+  display: block;
+  /* Makes the image flexible in width so they do not expand beyond their container. */
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
