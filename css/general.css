@@ -97,6 +97,17 @@ body {
   display: grid;
   column-gap: 9.6rem;
   row-gap: 9.6rem;
+  /* margin-bottom: 9.6rem; */
+}
+
+/* The pseudo element below allows the several grids in the same section to have a margin bottom except the last child. We could also use the deleted code. */
+
+/* .grid:last-child {
+  margin-bottom: 0;
+} */
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
 }
 
 /* -- Means variation of the original. */
